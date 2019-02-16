@@ -1,0 +1,53 @@
+@import '../../theme'
+div.container
+  height: 100vh
+  section
+    background: url('../../assets/imagens/background.jpg')
+    background-size: cover
+    background-repeat: no-repeat
+    div.title
+      position: absolute
+      bottom: 0
+      left: 0
+      max-width: 600px
+      h1
+        color: #fff
+        font-size: 35px
+        font-weight: 300
+      p
+        color: #e6e5e5
+        line-height: 1.9
+  form
+    background: $secondary
+    a.cadastro
+      color: $primary
+      -webkit-font-smoothing: antialiased
+      text-decoration: none
+      line-height: 1.5
+      font-size: 0.9em
+      letter-spacing: .2px
+    article
+      h2
+        color: $primary
+        font-size: 22px
+        letter-spacing: 0.5px
+        font-weight: 400
+        line-height: 1.5
+      p
+        font-size: 13px
+        margin-bottom: 15px
+        color: #888da8
+        line-height: 1.9
+      label
+        display: block
+        margin-bottom: 25px
+
+@media screen and (max-width:1024px)
+  section
+    display: none
+  form
+    padding: 50px 10px 10px 10px !important
+    width: 100% !important
+    height: auto
+    article
+      margin: 10% auto 0 auto !important

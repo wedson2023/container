@@ -1,0 +1,22 @@
+<ng-progress color="#00a0e4"></ng-progress>
+<div class="container flex flex-between">
+  <section class="pd-all-50 wid-65">
+    <div class="title pd-all-30">
+      <h1>Plataforma de gerenciamento do sistema</h1>
+      <p>Acesso para controle da plataforma.</p>
+    </div>
+  </section>
+  <form class="wid-35 pd-all-50 flex flex-center flex-column" ngNativeValidate (ngSubmit)="login(usuario)">
+    <article class="wid-85 mg-auto">
+      <h2>Plataforma de gereciamento do aplicativo!</h2>
+      <p>Acesse o painel de controle.</p>
+      <label>
+        <input class="field-pd-10 wid-100" placeholder="E-mail" [(ngModel)]="usuario.email" name="email" required type="email">
+      </label>
+      <label>
+        <input class="field-pd-10 wid-100" placeholder="Senha" [(ngModel)]="usuario.password" name="senha" required type="password">
+      </label>
+      <button class="btn wid-100" type="submit">Entrar</button>
+    </article>
+  </form>
+</div>
