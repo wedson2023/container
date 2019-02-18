@@ -29,16 +29,16 @@ export class LoginComponent implements OnInit {
 
 
   login(usuario){
-    this.progresso.start();
-    this.http.ApiPost('login', usuario).subscribe((response:any) => {
-      this.progresso.complete();
-      this.user.setUser(response.user);
-      localStorage.setItem('token', response.token);
-      this.router.navigate(['dashboard']);
-    }, (err:any) => {
-      swal('Erro', ( err.error.message || err.error.error ), 'error')
-      this.progresso.complete();
-    })
+    // this.progresso.start();
+    // this.http.ApiPost('login', usuario).subscribe((response:any) => {
+    //   this.progresso.complete();
+    //   this.user.setUser(response.user);
+    //   localStorage.setItem('token', response.token);
+       this.router.navigate(['dashboard']);
+    // }, (err:any) => {
+    //   swal('Erro', ( err.error.message || err.error.error ), 'error')
+    //   this.progresso.complete();
+    // })
   }
 
   ngOnInit() {

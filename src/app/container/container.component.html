@@ -1,0 +1,37 @@
+<div [class]="screen"></div>
+<header>
+  <a href="javascript:void(0)">
+    <img src="./assets/imagens/logo_name.png" alt="">
+  </a>
+  <i class="menu material-icons">menu</i>
+</header>
+<nav class="menu">
+  <div class="perfil">
+    <div class="circle">
+        <img src="./assets/imagens/avatar.jpg" alt="">
+    </div>
+    <h2>Wedson</h2>
+    <p>Wedson Webdesigner</p>
+    <a (click)="logout()" href="javascript:void(0)" title="Sair do painel de controle">Sair</a>
+  </div>
+  <ul>
+    <li class="link" *ngFor="let nav of navigator">
+      <a *ngIf="!nav.page" routerLinkActive="active" [routerLink]="nav.link">
+          <i class="material-icons">{{ nav.icon }}</i>{{ nav.name }}
+      </a>
+      <a class="sub" href="javascript:void(0)" *ngIf="nav.page">
+          <i class="material-icons">{{ nav.icon }}</i>{{ nav.name }}
+      </a>
+      <div *ngIf="nav.page">
+        <ul *ngFor="let sub of nav.page">
+            <a routerLinkActive="active" [routerLink]="sub.link">
+                <i class="material-icons">{{ sub.icon }}</i>{{ sub.name }}
+            </a>
+        </ul>
+      </div>
+    </li>
+  </ul>
+</nav>
+<section class="container">
+    <router-outlet></router-outlet>
+</section>

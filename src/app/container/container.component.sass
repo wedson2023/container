@@ -1,0 +1,125 @@
+@import '../../theme'
+
+.screen
+  background: $secondary
+  position: fixed
+  opacity: 0
+  z-index: 150
+  width: 100%
+  height: 100%
+  transition-duration: 0.3s
+
+.active
+    color: $primary !important
+
+header
+  position: fixed
+  width: 100%
+  padding: 10px 10px
+  background: $secondary
+  z-index: 100
+  display: flex
+  justify-content: space-between
+  .material-icons
+    color: #ffffff
+    font-size: 33px
+    margin: 0 5px
+    cursor: pointer
+  i.menu
+    display: none
+  a
+    img
+      height: 35px
+
+nav
+  position: fixed
+  width: 20%
+  margin-top: 63px
+  background: #ffffff
+  height: 100vh
+  z-index: 100
+  div.perfil
+    text-align: center
+    div.circle
+      width: 120px
+      height: 120px
+      display: flex
+      justify-content: center
+      border-radius: 50%
+      margin: 10px auto
+      overflow: hidden
+      img
+        width: 140px
+    h2
+      font-size: 1em
+      color: $secondary
+    p
+      font-size: 0.9em
+      color: $secondary
+    a
+      background: $primary
+      color: #ffffff
+      padding: 2px
+      margin: 5px auto
+      width: 60px
+      font-size: 0.8em
+      display: block
+  ul
+    margin-top: 25px
+    padding: 0 15px
+    div
+      display: none
+    li
+      margin-bottom: 25px
+    a
+      color: $gray
+      font-weight: 500
+      display: flex
+      justify-content: flex-start
+      align-items: center
+      &:hover
+        color: $primary
+      i
+        margin-right: 20px
+
+section.container
+  position: absolute
+  top: 63px
+  right: 0
+  padding: 25px
+  width: 80%
+
+@media screen and (max-width:1024px)
+
+  header
+    .menu
+      display: block !important
+    .ponto
+      display: none
+  nav
+    display: none
+    position: absolute
+    width: 65%
+    margin-left: -65%
+    margin-top: 0
+
+  section.container
+    position: none
+    padding: 10px
+    width: 100%
+
+@media screen and (max-width:400px)
+  div.perfil
+    text-align: center
+    img
+      width: 120px
+    h2
+      font-size: 0.9em
+    p
+      font-size: 0.8em
+  ul
+    padding: 0 10px !important
+    a
+      font-size: 0.9em
+      i
+        margin-right: 5px !important
